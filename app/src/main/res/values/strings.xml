@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Mediiva</string>
+    <string name="search_hint">Search</string>
+
+    <string name="imageset_page_chapter_count">%1$d / %2$d</string>
+
+    <string name="popup_view_mode_minimal">Minimal</string>
+    <string name="popup_view_mode_compact">Compact</string>
+    <string name="popup_view_mode_descriptive">Details</string>
+    <string name="popup_library_edit">Edit</string>
+    <string name="popup_library_delete">Delete</string>
+
+    <string name="tag_simple_prefix" translatable="false">simple:</string>
+    <string name="tag_female_prefix" translatable="false">female:</string>
+    <string name="tag_hermaphrodite_prefix" translatable="false">hermaphrodite:</string>
+    <string name="tag_male_prefix" translatable="false">male:</string>
+    <string name="tag_location_prefix" translatable="false">location:</string>
+
+    <string name="tag_female_gender_singular">Girl</string>
+    <string name="tag_female_gender_plural">Girls</string>
+    <string name="tag_hermaphrodite_gender_singular">Futa</string>
+    <string name="tag_hermaphrodite_gender_plural">Futas</string>
+    <string name="tag_male_gender_singular">Boy</string>
+    <string name="tag_male_gender_plural">Boys</string>
+
+    <string name="language_code_none" translatable="false">none</string>
+    <string name="language_code_unknown" translatable="false">unknown</string>
+    <string name="language_name_none">N/A</string>
+    <string name="language_name_unknown">Unknown</string>
+
+    <string name="country_code_unknown" translatable="false">unknown</string>
+    <string name="country_name_unknown">Unknown</string>
+
+    <string name="imageset_default_name">Unknown Name</string>
+    <string name="movie_default_name">Unknown Name</string>
+    <string name="character_default_name">Unknown Name</string>
+    <string name="character_default_universe">Unknown Universe</string>
+
+    <string name="series">Series</string>
+    <string name="studio">Studio</string>
+    <string name="director">Director</string>
+    <string name="premiered">Released</string>
+    <string name="runtime">Runtime</string>
+    <string name="starring">Starring</string>
+    <string name="characters">Characters</string>
+    <string name="tags">Tags</string>
+    <string name="actor_as_placeholder">as %1$s</string>
+
+    <string name="runtime_placeholder">%1$dm</string>
+
+    <string name="dialog_new_library_type_image_set">Image set library</string>
+    <string name="dialog_new_library_type_movie">Movie library</string>
+    <string-array name="dialog_new_library_types">
+        <item>@string/dialog_new_library_type_image_set</item>
+        <item>@string/dialog_new_library_type_movie</item>
+    </string-array>
+
+    <string-array name="tag_simple_lookout_prefixes">
+        <item>simple:</item>
+        <item>other:</item>
+        <item>misc:</item>
+        <item>miscellaneous:</item>
+    </string-array>
+
+    <string-array name="tag_female_lookout_prefixes">
+        <item>f:</item>
+        <item>female:</item>
+        <item>girl:</item>
+        <item>woman:</item>
+        <item>women:</item>
+        <item>lady:</item>
+    </string-array>
+
+    <string-array name="tag_hermaphrodite_lookout_prefixes">
+        <item>h:</item>
+        <item>hermaphrodite:</item>
+        <item>futa:</item>
+        <item>futanari:</item>
+        <item>dickgirl:</item>
+        <item>herma:</item>
+    </string-array>
+
+    <string-array name="tag_male_lookout_prefixes">
+        <item>m:</item>
+        <item>male:</item>
+        <item>boy:</item>
+        <item>man:</item>
+        <item>men:</item>
+        <item>dude:</item>
+        <item>guy:</item>
+    </string-array>
+
+    <string-array name="tag_location_lookout_prefixes">
+        <item>location:</item>
+        <item>place:</item>
+        <item>setting:</item>
+        <item>where:</item>
+        <item>spot:</item>
+        <item>scene:</item>
+        <item>area:</item>
+    </string-array>
+</resources>

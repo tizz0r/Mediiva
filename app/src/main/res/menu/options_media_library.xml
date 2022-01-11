@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/options_media_library_search_new_files"
+        android:title="Search for new files" />
+    <item android:id="@+id/options_media_library_recreate_all"
+        android:title="Recreate entire library" />
+</menu>

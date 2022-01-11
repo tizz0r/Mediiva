@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/drawer_activity_main_top"
+        android:orderInCategory="100"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home TODO" />
+        <item
+            android:id="@+id/nav_libraries"
+            android:icon="@drawable/ic_bookmark"
+            android:title="Libraries TODO" />
+    </group>
+
+    <group android:id="@+id/drawer_activity_main_libraries"
+        android:orderInCategory="101"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_test_library1"
+            android:icon="@drawable/ic_imageset"
+            android:title="My Library" />
+        <item
+            android:id="@+id/nav_test_library2"
+            android:icon="@drawable/ic_imageset"
+            android:title="My Library" />
+    </group>
+
+    <group android:id="@+id/drawer_activity_main_bottom"
+        android:orderInCategory="102"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings TODO" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info"
+            android:title="About TODO" />
+    </group>
+</menu>

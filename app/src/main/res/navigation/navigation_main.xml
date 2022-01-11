@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main">
+
+    <!--TODO change labels to string resources-->
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="de.timschubert.mediiva.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_libraries"
+        android:name="de.timschubert.mediiva.ui.libraries.LibrariesFragment"
+        android:label="Libraries TODO"
+        tools:layout="@layout/fragment_libraries_overview" />
+
+    <fragment
+        android:id="@+id/nav_test_library1"
+        android:name="de.timschubert.mediiva.ui.imagesetlibrary.ImageSetLibraryFragment"
+        android:label="Test Image Set Library"
+        tools:layout="@layout/fragment_imageset_library" />
+
+    <fragment
+        android:id="@+id/nav_test_library2"
+        android:name="de.timschubert.mediiva.ui.movielibrary.MovieLibraryFragment"
+        android:label="Test Movie Library"
+        tools:layout="@layout/fragment_imageset_library" />
+
+</navigation>

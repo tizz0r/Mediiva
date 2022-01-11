@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:foreground="@drawable/foreground_entry_imageset"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/entry_imageset_descriptive_poster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/background_poster"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Some Title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/entry_imageset_descriptive_locale"
+        app:layout_constraintStart_toEndOf="@+id/entry_imageset_descriptive_poster"
+        app:layout_constraintTop_toTopOf="@+id/entry_imageset_descriptive_poster" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_artists"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Some Artist"
+        android:textSize="15sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/entry_imageset_descriptive_title"
+        app:layout_constraintStart_toStartOf="@+id/entry_imageset_descriptive_title"
+        app:layout_constraintTop_toBottomOf="@+id/entry_imageset_descriptive_title" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_series_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Series"
+        android:textColor="#737373"
+        app:layout_constraintStart_toStartOf="@+id/entry_imageset_descriptive_artists"
+        app:layout_constraintTop_toBottomOf="@+id/entry_imageset_descriptive_artists" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_series"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Some Series"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/entry_imageset_descriptive_series_desc"
+        app:layout_constraintEnd_toEndOf="@+id/entry_imageset_descriptive_artists"
+        app:layout_constraintStart_toEndOf="@+id/entry_imageset_descriptive_series_desc"
+        app:layout_constraintTop_toTopOf="@+id/entry_imageset_descriptive_series_desc" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_group_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group"
+        android:textColor="#737373"
+        app:layout_constraintStart_toStartOf="@+id/entry_imageset_descriptive_series_desc"
+        app:layout_constraintTop_toBottomOf="@+id/entry_imageset_descriptive_series_desc" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Some Group"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/entry_imageset_descriptive_group_desc"
+        app:layout_constraintEnd_toEndOf="@+id/entry_imageset_descriptive_series"
+        app:layout_constraintStart_toEndOf="@+id/entry_imageset_descriptive_series_desc"
+        app:layout_constraintTop_toTopOf="@+id/entry_imageset_descriptive_group_desc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entry_imageset_descriptive_tags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal"
+        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/entry_imageset_descriptive_pages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/entry_imageset_descriptive_group_desc"
+        app:layout_constraintTop_toBottomOf="@id/entry_imageset_descriptive_group_desc"
+        tools:listitem="@layout/entry_tag">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/entry_imageset_descriptive_locale"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/entry_imageset_descriptive_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/entry_imageset_descriptive_title" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="1900"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/entry_imageset_descriptive_pages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="0 / 0 Pages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/entry_imageset_descriptive_poster" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

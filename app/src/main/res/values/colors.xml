@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color_toolbar">#00695c</color>
+    <color name="color_statusbar">#BB00695c</color>
+    <color name="color_drawer_background">#ffffff</color>
+
+    <color name="color_poster_backdrop">@color/white</color>
+
+    <color name="color_background_bottombar">#BB00695c</color>
+    <color name="color_background_overview">@color/white</color>
+    <color name="color_person_thumb_background">@color/tag_background_male</color>
+
+    <color name="movie_overview_fanart_overlay">#33ffffff</color>
+
+    <color name="tag_background_simple">#eeeeee</color>
+    <color name="tag_background_location">#b0bec5</color>
+    <color name="tag_background_female">#f8bbd0</color>
+    <color name="tag_background_male">#90caf9</color>
+    <color name="tag_background_hermaphrodite">#ffab91</color>
+
+    <color name="imageset_background_default">#eeeeee</color>
+    <color name="imageset_background_comic">#b0bec5</color>
+    <color name="imageset_background_doujinshi">#f8bbd0</color>
+    <color name="imageset_background_manga">#90caf9</color>
+    <color name="imageset_background_artistcg">#ffab91</color>
+    <color name="imageset_background_gamecg">#ffab91</color>
+</resources>
