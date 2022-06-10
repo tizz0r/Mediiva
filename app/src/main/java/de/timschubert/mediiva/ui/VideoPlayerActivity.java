@@ -41,7 +41,7 @@ public class VideoPlayerActivity extends AppCompatActivity
 
         playerView.setPlayer(exoPlayer);
 
-        long movieId = getIntent().getLongExtra("movie_id", -1L);
+        long movieId = getIntent().getLongExtra("movie_id", -1L); //TODO resource
         AppExecutors.getInstance().diskIO().execute(() -> getMovieFromDatabase(movieId));
     }
 

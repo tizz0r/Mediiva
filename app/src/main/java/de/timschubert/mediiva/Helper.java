@@ -110,6 +110,34 @@ public class Helper
         return resizeBitmapKeepRatio(poster, maxWidth, maxHeight);
     }
 
+    @NonNull
+    public static Bitmap resizeFanArtForSaving(@NonNull Bitmap fanArt, @NonNull Context context)
+    {
+        int maxWidth = context.getResources().getInteger(R.integer.fanart_storage_max_width_px);
+        int maxHeight = context.getResources().getInteger(R.integer.fanart_storage_max_height_px);
+
+        return resizeBitmapKeepRatio(fanArt, maxWidth, maxHeight);
+    }
+
+    @NonNull
+    public static Bitmap resizePageThumbnailForSaving(@NonNull Bitmap page, @NonNull Context context)
+    {
+        int maxWidth = context.getResources().getInteger(R.integer.page_thumbnail_storage_max_width_px);
+        int maxHeight = context.getResources().getInteger(R.integer.page_thumbnail_storage_max_height_px);
+
+        return resizeBitmapKeepRatio(page, maxWidth, maxHeight);
+    }
+
+    @NonNull
+    public static Bitmap resizePersonThumbnailForSaving(@NonNull Bitmap person, @NonNull Context context)
+    {
+        int maxWidth = context.getResources().getInteger(R.integer.people_storage_max_width_px);
+        int maxHeight = context.getResources().getInteger(R.integer.people_storage_max_height_px);
+
+        return resizeBitmapKeepRatio(person, maxWidth, maxHeight);
+    }
+
+    @NonNull
     public static Bitmap resizeBitmapKeepRatio(@NonNull Bitmap bitmap,
                                                int maxWidth,
                                                int maxHeight)

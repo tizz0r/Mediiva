@@ -2,4 +2,10 @@
 <resources>
     <integer name="poster_storage_max_width_px">300</integer>
     <integer name="poster_storage_max_height_px">450</integer>
+    <integer name="fanart_storage_max_width_px">1280</integer>
+    <integer name="fanart_storage_max_height_px">720</integer>
+    <integer name="page_thumbnail_storage_max_width_px">128</integer>
+    <integer name="page_thumbnail_storage_max_height_px">128</integer>
+    <integer name="people_storage_max_width_px">64</integer>
+    <integer name="people_storage_max_height_px">64</integer>
 </resources>

@@ -144,7 +144,7 @@ public class MovieOverviewActivity extends AppCompatActivity
         binding.activityMovieOverviewPoster.setOnClickListener(v ->
         {
             Intent intent = new Intent(MovieOverviewActivity.this, VideoPlayerActivity.class);
-            intent.putExtra("movie_id", movie.getId());
+            intent.putExtra("movie_id", movie.getId()); //TODO string resource
             startActivity(intent);
         });
 

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Mediiva</string>
-    <string name="search_hint">Search</string>
+    <string name="search_hint">Search for actors, tags, etc..</string>
 
     <string name="imageset_page_chapter_count">%1$d / %2$d</string>
 

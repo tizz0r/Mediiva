@@ -20,13 +20,22 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                android:value=".ui.SearchActivity" />
+        </activity>
+
+        <activity android:name=".ui.SearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Mediiva.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
             <meta-data android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
 
         <activity android:name=".OLD.GalleryViewerActivity" />
-        <activity android:name=".ui.MovieOverviewActivity"
-            android:theme="@style/Theme.Mediiva.NoActionBar"/>
         <activity android:name=".ui.VideoPlayerActivity"
             android:configChanges="orientation|screenSize|layoutDirection"
             android:theme="@style/Theme.Mediiva.NoActionBar.Fullscreen"/>

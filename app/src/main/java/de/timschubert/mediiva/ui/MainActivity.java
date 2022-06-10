@@ -1,9 +1,12 @@
 package de.timschubert.mediiva.ui;
 
 import android.app.SearchManager;
+import android.app.SearchableInfo;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.transition.AutoTransition;
 import androidx.transition.TransitionManager;
 
@@ -56,12 +60,12 @@ public class MainActivity extends AppCompatActivity
                 {
                     @Override
                     public void onHomePressed() {
-                        changeFragment(new HomeFragment());
+                        changeFragment(new HomeFragment(), false);
                     }
 
                     @Override
                     public void onLibrariesPressed() {
-                        changeFragment(new LibrariesFragment());
+                        changeFragment(new LibrariesFragment(), true);
                     }
 
                     @Override
@@ -93,19 +97,19 @@ public class MainActivity extends AppCompatActivity
                 Bundle args = new Bundle();
                 args.putLong("key_id", library.getId());
                 libraryFragment.setArguments(args);
-                changeFragment(libraryFragment);
+                changeFragment(libraryFragment, true);
                 return;
             }
         }
     }
 
-    private void changeFragment(Fragment fragment)
+    private void changeFragment(Fragment fragment, boolean addToBackStack)
     {
         if(fragment == null) return;
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.content_main_nav_host, fragment)
-                .commit();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.content_main_nav_host, fragment);
+        //if(addToBackStack){ transaction.addToBackStack(null); } TODO
+        transaction.commit();
     }
 
     @Override
@@ -122,7 +126,9 @@ public class MainActivity extends AppCompatActivity
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.toolbar_menu_library_search).getActionView();
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        SearchableInfo info = searchManager.getSearchableInfo(getComponentName());
+        searchView.setSearchableInfo(info);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
             @Override public boolean onQueryTextSubmit(String query) { return false; }

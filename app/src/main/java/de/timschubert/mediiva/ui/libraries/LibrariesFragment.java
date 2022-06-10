@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.List;
+import java.util.Objects;
 
 import de.timschubert.mediiva.AppExecutors;
 import de.timschubert.mediiva.ViewerMain;
@@ -38,7 +39,7 @@ public class LibrariesFragment extends Fragment
         binding = FragmentLibrariesOverviewBinding.inflate(inflater, container, false);
 
         try {
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Libraries"); // TODO
+            Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setTitle("Libraries"); // TODO
         }
         catch (NullPointerException ignore) {}
 

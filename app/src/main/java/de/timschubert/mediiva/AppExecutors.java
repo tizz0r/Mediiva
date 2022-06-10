@@ -49,9 +49,6 @@ public class AppExecutors
         private final Handler mainThreadHandler = new Handler(Looper.getMainLooper());
 
         @Override
-        public void execute(Runnable runnable)
-        {
-            mainThreadHandler.post(runnable);
-        }
+        public void execute(Runnable runnable) { mainThreadHandler.post(runnable); }
     }
 }

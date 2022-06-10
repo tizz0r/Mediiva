@@ -1,6 +1,5 @@
 package de.timschubert.mediiva.ui.movielibrary;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +13,7 @@ import android.widget.PopupMenu;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +24,7 @@ import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 
 import java.util.List;
+import java.util.Objects;
 
 import de.timschubert.mediiva.AppExecutors;
 import de.timschubert.mediiva.OLD.RecyclerItemClickListener;
@@ -41,8 +42,8 @@ import de.timschubert.mediiva.data.movie.ActorInfo;
 import de.timschubert.mediiva.data.movie.Movie;
 import de.timschubert.mediiva.data.movie.MovieDao;
 import de.timschubert.mediiva.databinding.FragmentImagesetLibraryBinding;
-import de.timschubert.mediiva.ui.MovieOverviewActivity;
 import de.timschubert.mediiva.ui.adapter.MovieAdapter;
+import de.timschubert.mediiva.ui.movieoverview.MovieOverviewFragment;
 
 public class MovieLibraryFragment extends Fragment
 {
@@ -134,6 +135,11 @@ public class MovieLibraryFragment extends Fragment
         LibraryDao libraryDao = AppDatabase.getInstance(getContext()).libraryDao();
         library = libraryDao.getLibraryById(libraryId);
 
+        try {
+            Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).setTitle(library.getName()); // TODO
+        }
+        catch (NullPointerException ignore) {}
+
         MovieDao movieDao = AppDatabase.getInstance(getContext()).movieDao();
         List<Movie> movies = movieDao.getMoviesByLibraryId(libraryId);
 
@@ -156,9 +162,11 @@ public class MovieLibraryFragment extends Fragment
             @Override
             public void onItemClick(View view, int position)
             {
-                Intent intent = new Intent(getContext(), MovieOverviewActivity.class);
-                intent.putExtra("movie_id", movieAdapter.getMovieIdForPosition(position));
-                startActivity(intent);
+                Bundle args = new Bundle();
+                args.putLong("movie_id", movieAdapter.getMovieIdForPosition(position));
+                Fragment movieOverviewFragment = new MovieOverviewFragment();
+                movieOverviewFragment.setArguments(args);
+                getParentFragmentManager().beginTransaction().replace(R.id.content_main_nav_host, movieOverviewFragment).addToBackStack("library").commit(); //TODO
             }
 
             @Override

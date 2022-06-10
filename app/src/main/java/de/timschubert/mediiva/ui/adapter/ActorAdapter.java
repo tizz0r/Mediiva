@@ -15,10 +15,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import de.timschubert.mediiva.AppExecutors;
 import de.timschubert.mediiva.R;
 import de.timschubert.mediiva.ViewerMain;
 import de.timschubert.mediiva.data.movie.Actor;
 import de.timschubert.mediiva.data.movie.ActorInfo;
+import de.timschubert.mediiva.data.movie.Movie;
 
 public class ActorAdapter extends RecyclerView.Adapter<ActorAdapter.ViewHolder>
 {
